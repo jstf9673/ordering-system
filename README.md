@@ -23,15 +23,21 @@ npm run build --report
   vue-loading-template
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-###vuejs打包遇到的坑
+### vuejs打包遇到的坑
+
     打包路径配置config/index.js  build下
+
     ```javascript
     assetsSubDirectory: 'static',
+
     assetsPublicPath: '/',
     ```
+
     改为
+
     ```javascript
     assetsSubDirectory: './static',
+
     assetsPublicPath: './',
     ```
 
