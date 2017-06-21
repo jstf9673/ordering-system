@@ -58,7 +58,7 @@ export default {
         .then((res) => {
           if (res.data.status == 1) {
             console.log(res.data, this.formData)
-            this.showMsg = res.data.data.info
+            this.showMsg = '提交成功，坐等饭吃吧'
             this.showinputText = true
             setTimeout(() => {
               this.showinputText = false
