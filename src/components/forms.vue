@@ -24,7 +24,7 @@ export default {
   name: 'forms',
   data () {
     return {
-      formData: {username: '',food: '',action: '不辣'},
+      formData: {username: '',food: '',action: '不辣', logintoken: this.$route.query.log, userid: this.$route.query.uid},
       dinnerTypes: ['不辣', '微辣', '中辣', '重口味'],
       isActive: false,
       Msg: '',
@@ -63,7 +63,9 @@ export default {
             setTimeout(() => {
               this.showinputText = false
             },3000)
-            this.formData = {username: '',food: '',action: '不辣'}
+            this.formData = {username: '',food: '',action: '不辣', logintoken: this.$route.query.log, userid: this.$route.query.uid}
+          } else {
+
           }
         })
         .catch(function (response) {
@@ -72,7 +74,7 @@ export default {
     }
   },
   created () {
-
+    console.log(this.$route.query)
   },
   mounted () {
 
