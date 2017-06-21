@@ -42,4 +42,8 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
     ```
 ## DEMO
 
+<<<<<<< HEAD
 [预览](https://jstf9673.github.io/ordering-system/dist/index.html)
+=======
+   [预览](https://jstf9673.github.io/ordering-system/dist/index.html)
+>>>>>>> adacfac8c2791cb11a8d35ad3e47f3429e906798
