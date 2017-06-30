@@ -5,7 +5,11 @@ import App from './App'
 import router from './router'
 import VueResource from 'vue-resource'
 
+import './plugin/toast.scss'
+import Toast from './plugin/toast'
+
 Vue.use(VueResource)
+Vue.use(Toast)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

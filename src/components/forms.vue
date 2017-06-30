@@ -15,11 +15,11 @@
       </div>
       <div class="submit-btn" @click="submitData()">提交信息</div>
     </div>
-    <v-inputText v-if="showinputText" :show-msg="Msg"></v-inputText>
+    <!-- <v-inputText v-if="showinputText" :show-msg="Msg"></v-inputText> -->
   </div>
 </template>
 <script>
-import vInputText from './inputText'
+// import vInputText from './inputText'
 export default {
   name: 'forms',
   data () {
@@ -32,26 +32,28 @@ export default {
     }
   },
   components: {
-    'v-inputText':vInputText
+    // 'v-inputText':vInputText
   },
   methods: {
     submitData () {
       if (this.formData.username == '') {
         this.Msg = '请输入您的大名'
         this.showinputText = true
-        setTimeout(() => {
-          this.showinputText = false
-          this.Msg = ''
-        },3000)
+        this.$toast(this.Msg)
+        // setTimeout(() => {
+        //   this.showinputText = false
+        //   this.Msg = ''
+        // },3000)
         return
       }
       if (this.formData.food == '') {
         this.Msg = '晚餐想吃什么'
         this.showinputText = true
-        setTimeout(() => {
-          this.showinputText = false
-          this.Msg = ''
-        },3000)
+        this.$toast(this.Msg, '', 1000)
+        // setTimeout(() => {
+        //   this.showinputText = false
+        //   this.Msg = ''
+        // },3000)
         return
       }
       this.$http.get('https://test.didi365.com/Gold/ddOrder/putddorder?callback=0', {params: this.formData})
@@ -60,9 +62,10 @@ export default {
             console.log(res.data, this.formData)
             this.showMsg = '提交成功，坐等饭吃吧'
             this.showinputText = true
-            setTimeout(() => {
-              this.showinputText = false
-            },3000)
+            this.$toast(this.Msg, 1500, 'blue')
+            // setTimeout(() => {
+            //   this.showinputText = false
+            // },3000)
             this.formData = {username: '',food: '',action: '不辣', logintoken: this.$route.query.log, userid: this.$route.query.uid}
           } else {
 

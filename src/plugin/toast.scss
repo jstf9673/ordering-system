@@ -1,0 +1,60 @@
+$blue_color : #00b0f0;
+$blue_hover_color : #08aae5;
+
+$green_color : #00d1b2;
+$green_hover_color : #18c2a9;
+
+$orange_color : #f4b976;
+$orange_hover_color : #e9ae6a;
+
+$pink_color : #f39894;
+$pink_hover_color : #d77672;
+
+$cyan_color : #26b6be;
+$cyan_hover_color : #1facb4;
+
+$red_color: #fe5e5e;
+$default_color: #fff;
+
+.tipsModal {
+  text-align: center;
+  font-size: 1.6rem;
+  // color: $color;
+  width: 80%;
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.red-tips {
+  color: $red_color;
+}
+.blue-tips {
+  color: $blue_color;
+}
+.orange-tips {
+  color: $orange_color;
+}
+.green-tips {
+  color: $green_color;
+}
+.pink-tips {
+  color: $pink_color;
+}
+.cyan-tips {
+  color: $cyan_color;
+}
+.default-tips {
+  color: $default_color;
+}
+
+// $default_color: red;
+
+// .#{$default_color}-tips {
+//   color: $default_color
+// }

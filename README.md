@@ -23,6 +23,14 @@ npm run build --report
   vue-loading-template
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+## vue提示框插件开发
+  目录: ./src/plugin
+  ## 使用
+  this.$toast(Msg, color, time)
+  Msg: 显示的提示信息
+  color: 提示文字的颜色（默认为白色）
+  time: 提示框多长时间后消失（默认为3000ms）
+
 ### vuejs打包遇到的坑
 
     打包路径配置config/index.js  build下
@@ -42,8 +50,5 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
     ```
 ## DEMO
 
-<<<<<<< HEAD
 [预览](https://jstf9673.github.io/ordering-system/dist/index.html)
-=======
-   [预览](https://jstf9673.github.io/ordering-system/dist/index.html)
->>>>>>> adacfac8c2791cb11a8d35ad3e47f3429e906798
+

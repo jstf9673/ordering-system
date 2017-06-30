@@ -8,7 +8,9 @@
     </div>
     <div class="content">
       <!-- <cons :is='currentView'></cons> -->
-      <router-view ></router-view>
+      <keep-alive>
+        <router-view ></router-view>
+      </keep-alive>
     </div>
   </div>
 </template>
